@@ -1,0 +1,7 @@
+# English strings go here for Rails i18n
+es:
+  succesfully_merged: "Incidencias unidas con exito."
+  button_merge: "Unir en una (merge)"
+  from_issue_number: "Descripcion incluida desde la incidencia unida #"
+  issue_merged_with: "Unida a la incidencia #"
+

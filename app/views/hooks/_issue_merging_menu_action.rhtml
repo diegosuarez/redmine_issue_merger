@@ -1,0 +1,3 @@
+<hr/>
+<%= link_to_if_authorized l(:button_merge), {:controller => 'issues_merge', :action => 'merge', :ids => @issues.collect(&:id)}, :class => 'icon icon-merge' %>
+

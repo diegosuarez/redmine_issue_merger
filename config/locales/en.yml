@@ -1,0 +1,6 @@
+# English strings go here for Rails i18n
+en:
+  succesfully_merged: "Issues succesfully merged."
+  button_merge: "Merge"
+  from_issue_number: "Description merged from issue #"
+  issue_merged_with: "Merged with issue #"
