@@ -7,11 +7,11 @@ module IssuePatch
 #    base.extend(ClassMethods)
 
     base.send(:include, InstanceMethods)
-
+    puts "include InstanceMethods"
     # Same as typing in the class 
-    base.class_eval do
-      unloadable # Send unloadable so it will not be unloaded in development
-    end
+#    base.class_eval do
+#      unloadable # Send unloadable so it will not be unloaded in development
+#    end
 end
   
  # module ClassMethods
@@ -25,7 +25,7 @@ end
 	self.status_id = 6 # Marcamos la incidencia como rechazada (tipo 6)
 	relationship = IssueRelation.new( :issue_from=> self, :issue_to=>anotherIssue, :relation_type=>IssueRelation::TYPE_DUPLICATES)
 	relationship.save!
-	anotherIssue.journals << Journal.new( :journalized=>anotherIssue, :user=> merged_by, :notes=>l("from_issue_number"+self.id.to_s+":\n"+self.description )
+	anotherIssue.journals << Journal.new( :journalized=>anotherIssue, :user=> merged_by, :notes=>l("from_issue_number")+self.id.to_s+":\n"+self.description )
 	anotherIssue.journals << self.journals
 	anotherIssue.watcher_users << self.watcher_users
 	anotherIssue.watcher_users << self.assigned_to if self.assigned_to
