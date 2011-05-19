@@ -1,5 +1,6 @@
 require 'redmine'
 require 'issue_patch'
+require 'observer_patch'
 require 'hooks'
 
 Redmine::Plugin.register :redmine_issue_merger do
